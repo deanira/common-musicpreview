@@ -15,7 +15,7 @@ public enum URLError: LocalizedError {
   public var errorDescription: String? {
     switch self {
     case .invalidResponse: return "common_invalid_response_desc".localized()
-    case .addressUnreachable(let url): return "common_address_unreachable_desc".localized()
+    case .addressUnreachable(let url): return String(format: "common_address_unreachable_desc".localized(), url.absoluteString)
     }
   }
 
